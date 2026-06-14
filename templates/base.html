@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touno Ndivayele Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #050505;
+            color: {{ text }};
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: {{ accent }};
+            padding: 0 50px;
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: {{ text }};
+        }
+        
+        nav {
+            display: flex;
+            gap: 12px;
+        }
+        
+        nav a {
+            background-color: {{ accent }};
+            color: {{ text }};
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        nav a.active {
+            background-color: {{ primary }};
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 60px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-text h2 {
+            font-size: 18px;
+            color: {{ secondary }};
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .hero-text h1 {
+            font-size: 58px;
+            font-weight: bold;
+            color: {{ text }};
+            margin-bottom: 20px;
+        }
+        
+        .hero-text p {
+            font-size: 24px;
+            color: {{ subtext }};
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+        
+        button, .btn {
+            background-color: {{ accent }};
+            color: #000000;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: opacity 0.3s;
+        }
+        
+        button:hover, .btn:hover {
+            opacity: 0.8;
+        }
+        
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .profile-img {
+            width: 340px;
+            height: 340px;
+            border-radius: 50%;
+            border: 5px solid {{ primary }};
+            object-fit: cover;
+        }
+        
+        .section {
+            margin: 60px 0;
+        }
+        
+        .section h2 {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: {{ text }};
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: {{ subtext }};
+            margin-bottom: 20px;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: {{ card }};
+            border: 1px solid {{ secondary }};
+            border-radius: 12px;
+            padding: 28px;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card h3 {
+            font-size: 22px;
+            font-weight: bold;
+            color: {{ text }};
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            font-size: 16px;
+            color: {{ subtext }};
+            flex-grow: 1;
+        }
+        
+        .card-icon {
+            font-size: 38px;
+            color: {{ primary }};
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: {{ subtext }};
+            border-top: 1px solid {{ secondary }};
+            margin-top: 60px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .about-image {
+            width: 100%;
+            max-width: 620px;
+            height: 360px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+        
+        .about-text h3 {
+            font-size: 14px;
+            color: {{ primary }};
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .about-text h2 {
+            font-size: 42px;
+            font-weight: bold;
+            color: {{ text }};
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            font-size: 18px;
+            color: {{ subtext }};
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2, .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                flex-wrap: wrap;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Touno Ndivayele</h1>
+        <nav>
+            <a href="/" class="{% if request.path == '/' %}active{% endif %}">HOME</a>
+            <a href="/about" class="{% if request.path == '/about' %}active{% endif %}">ABOUT</a>
+            <a href="/timeline" class="{% if request.path == '/timeline' %}active{% endif %}">TIMELINE</a>
+            <a href="/matlab" class="{% if request.path == '/matlab' %}active{% endif %}">MATLAB</a>
+            <a href="/blog" class="{% if request.path == '/blog' %}active{% endif %}">BLOG</a>
+            <a href="/github" class="{% if request.path == '/github' %}active{% endif %}">GITHUB</a>
+            <a href="/contact" class="{% if request.path == '/contact' %}active{% endif %}">CONTACT</a>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>(c) 2026 Touno Ndivayele Portfolio - All Rights Reserved</p>
+    </footer>
+</body>
+</html>

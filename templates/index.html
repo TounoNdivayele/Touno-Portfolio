@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h2>WELCOME</h2>
+            <h1>Touno Ndivayele</h1>
+            <p>Mechanical Engineering Student</p>
+            <div class="hero-buttons">
+                <a href="/contact" class="btn">Hire Me</a>
+                <a href="/timeline" class="btn">View Projects</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/profile.jpg" alt="Profile" class="profile-img">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <section class="section">
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Developer Skills</h3>
+                <p>• Python — automation, calculations, data analysis<br><br>
+                   • MATLAB — engineering simulations and problem solving<br><br>
+                   • CAD (SolidWorks / AutoCAD) — 3D design and modeling</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>Creative Work</h3>
+                <p>Modern responsive UI design and animation.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>Mechanical & Metallurgical</h3>
+                <p>Mechanical and metallurgical engineering modules.</p>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

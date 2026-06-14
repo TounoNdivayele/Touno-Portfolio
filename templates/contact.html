@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <section class="section" style="text-align: center;">
+        <h2>Contact Me</h2>
+        <p class="section-subtitle">Available for mechanical engineering projects and technical collaboration.</p>
+        <p style="font-size: 18px; color: {{ text }}; margin: 10px 0;">Email: tndivayele2@gmail.com</p>
+        <p style="font-size: 18px; color: {{ text }}; margin: 10px 0;">Cellphone: 0817207027</p>
+        
+        <form method="POST" style="max-width: 500px; margin: 40px auto; display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" placeholder="Your Name" style="padding: 12px; background-color: {{ card }}; border: 1px solid {{ primary }}; color: {{ text }}; border-radius: 6px; font-size: 16px;">
+            <input type="email" placeholder="Your Email" style="padding: 12px; background-color: {{ card }}; border: 1px solid {{ primary }}; color: {{ text }}; border-radius: 6px; font-size: 16px;">
+            <textarea placeholder="Message" rows="6" style="padding: 12px; background-color: {{ card }}; border: 1px solid {{ primary }}; color: {{ text }}; border-radius: 6px; font-size: 16px;"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</div>
+{% endblock %}

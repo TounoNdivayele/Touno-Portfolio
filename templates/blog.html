@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <section class="section">
+        <h2>Technical Blog</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">▶️</div>
+                <h3>Individual Contribution Video</h3>
+                <p>A local video demonstrating my Python work and individual contribution to the portfolio.</p>
+                <a href="/assets/portfolio%20video.mp4" class="btn" style="margin-top: auto;">Watch Video</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">▶️</div>
+                <h3>Understanding Data Structures</h3>
+                <p>Stacks, queues, and linked lists are useful for storing sensor readings, simulation steps, and project records.</p>
+            </div>
+            <div class="card" style="grid-column: span 1; min-height: auto;">
+                <h3>Embedded Video</h3>
+                <p><strong>YouTube: MATLAB for Engineering Calculations</strong></p>
+                <p style="font-size: 14px; margin-top: 10px;">This video supports the blog by showing how MATLAB can be used to model equations, analyze results, and explain technical workflows.</p>
+                <a href="https://www.youtube.com/watch?v=T_ekAD7U-wU" class="btn" style="margin-top: auto;">Watch on YouTube</a>
+            </div>
+        </div>
+        <div class="card" style="margin-top: 20px;">
+            <h3>Mathematical Notation</h3>
+            <p style="font-size: 26px; margin-top: 20px;">Total Cost = Σ (Qi × Pi) + O</p>
+        </div>
+    </section>
+</div>
+{% endblock %}
